@@ -10,9 +10,6 @@ const urlencodedParser = bodyParser.urlencoded({extended: false});
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/index.html', (req, res) => {
-});
-
 app.post('/send', urlencodedParser, (req, res) => {
     const output = `
     <p>You have a new contact request</p>
@@ -35,17 +32,17 @@ app.post('/send', urlencodedParser, (req, res) => {
     });
     
     const mailoptions = {
-      from: 'contactformua@gmail.com', 
-      to: 'contactformua@gmail.com', 
-      subject: 'Contact Request',
-      html: output
+        from: 'contactformua@gmail.com', 
+        to: 'contactformua@gmail.com', 
+        subject: 'Contact Request',
+        html: output
     };
     
     transporter.sendMail(mailoptions, (error, info) => {
-      if (error) {
-          return console.log(error);
-      }
-      console.log('Message sent: %s', info.messageId);   
+        if (error) {
+            return console.log(error);
+        }
+        console.log('Message sent: %s', info.messageId);   
     });
     res.redirect(req.get('referer'));
 });
