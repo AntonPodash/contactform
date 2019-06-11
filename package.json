@@ -1,16 +1,23 @@
 {
   "name": "contactform",
   "version": "1.0.0",
-  "description": "",
-  "main": "example.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "description": "Feedback form on site",
+  "main": "app.js",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonPodash/contactform.git"
+  },
+  "author": "'Anton Podash'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonPodash/contactform/issues"
+  },
+  "homepage": "https://github.com/AntonPodash/contactform#readme"
 }
